@@ -58,3 +58,12 @@ day1-mlflow-experiment-tracking/
 ├── README.md
 ├── mlflow.db
 └── mlruns/
+## Learning Outcome
+
+Through this experiment, I learned how to:
+
+1. Create and organize an MLflow experiment.
+2. Track model parameters during training.
+3. Log evaluation metrics for model performance.
+4. Register and log the trained machine learning model.
+5. Verify experiment runs through the MLflow dashboard.
