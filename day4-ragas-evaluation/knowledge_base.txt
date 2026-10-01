@@ -1,0 +1,73 @@
+ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING KNOWLEDGE BASE
+
+Artificial Intelligence (AI)
+Artificial Intelligence is the field of computer science that focuses on creating systems capable of performing tasks that normally require human intelligence. These tasks include learning, reasoning, problem solving, understanding language, recognizing patterns, and making decisions.
+
+Machine Learning (ML)
+Machine Learning is a branch of Artificial Intelligence in which computers learn patterns from data and use those patterns to make predictions or decisions without being explicitly programmed for every individual task.
+
+Supervised Learning
+Supervised learning uses labeled training data. Each training example contains input data and a known output. The model learns the relationship between inputs and outputs. Common supervised learning tasks include classification and regression.
+
+Unsupervised Learning
+Unsupervised learning works with data that does not have labeled outputs. The model attempts to discover hidden patterns or structures in the data. Clustering and dimensionality reduction are common examples.
+
+Deep Learning
+Deep Learning is a type of machine learning that uses neural networks with multiple layers. Deep learning is commonly used for image recognition, speech processing, natural language processing, and other complex tasks.
+
+Natural Language Processing
+Natural Language Processing, or NLP, is a field of AI that enables computers to process, understand, and generate human language. Applications include translation, sentiment analysis, chatbots, text classification, and question answering.
+
+Large Language Models
+A Large Language Model, or LLM, is a neural network trained on large amounts of text data. LLMs can understand and generate human-like text and can perform tasks such as summarization, question answering, translation, and text generation.
+
+Retrieval-Augmented Generation
+Retrieval-Augmented Generation, or RAG, combines information retrieval with language generation. A RAG system first retrieves relevant information from an external knowledge base and then provides that information to a language model as context. The language model uses the retrieved context to generate an answer.
+
+RAG Pipeline
+A typical RAG pipeline contains several stages. First, documents are loaded into the system. The documents are divided into smaller chunks. Embeddings are generated for the chunks and stored in a vector database. When a user asks a question, the system retrieves the most relevant chunks. These chunks are provided as context to a language model, which generates the final answer.
+
+Chunking
+Chunking is the process of dividing large documents into smaller pieces. Chunk size determines how much text is included in each chunk. Smaller chunks can improve retrieval precision, while larger chunks can preserve more surrounding context. Chunk overlap allows related information near chunk boundaries to be retained.
+
+Retrieval k
+Retrieval k represents the number of document chunks returned by a retriever for a query. For example, k=3 means that the three most relevant chunks are retrieved. Increasing k may provide more context, but too many irrelevant chunks can reduce answer quality.
+
+Embeddings
+Embeddings are numerical vector representations of text. Text with similar meanings tends to have similar vector representations. Embeddings allow a system to perform semantic similarity searches over documents.
+
+ChromaDB
+ChromaDB is a vector database commonly used in AI and RAG applications. It stores document embeddings and associated text and allows applications to retrieve documents that are semantically similar to a query.
+
+LangChain
+LangChain is a framework for developing applications powered by language models. It provides components for document loading, text splitting, embeddings, vector stores, retrievers, prompts, and language models.
+
+Ollama
+Ollama allows language models to run locally. It can be used to run models such as Qwen locally and provides an interface that applications can use to send prompts and receive model responses.
+
+Ragas
+Ragas is a framework for evaluating Retrieval-Augmented Generation systems. It provides evaluation metrics that help measure the quality of generated answers and retrieved context.
+
+Faithfulness
+Faithfulness measures whether the generated answer is supported by the retrieved context. A faithful answer should not contain unsupported claims that are not present in the provided context.
+
+Answer Relevancy
+Answer relevancy measures how relevant the generated answer is to the user's question. A highly relevant answer directly addresses the question without unnecessary information.
+
+Context Precision
+Context precision measures how much of the retrieved context is relevant to answering the question. Higher context precision indicates that the retriever is returning more useful information.
+
+Context Recall
+Context recall measures whether the retrieved context contains the information needed to answer the question. Higher context recall indicates that important information is successfully retrieved.
+
+RAG Evaluation
+RAG evaluation measures the performance of a complete retrieval-augmented generation system. Important evaluation dimensions include the quality of the retrieved context and the relevance and factual support of the generated answer.
+
+RAG Optimization
+RAG optimization involves modifying components of the RAG pipeline to improve evaluation results. Common changes include modifying chunk size, chunk overlap, retrieval k, embedding models, prompts, or retrieval strategies.
+
+MLflow
+MLflow is a platform for managing machine learning workflows. It can track experiments, parameters, metrics, models, and artifacts. MLflow can also support model registration and serving.
+
+Complete RAG Workflow
+A complete RAG workflow begins with a knowledge base. Documents are loaded and split into chunks. Embeddings are generated for the chunks and stored in ChromaDB. A retriever searches the vector database for relevant chunks. The retrieved context is passed to an LLM such as Qwen. The LLM generates an answer using the retrieved context. Ragas can then evaluate the quality of the RAG responses using metrics such as faithfulness, answer relevancy, context precision, and context recall.
